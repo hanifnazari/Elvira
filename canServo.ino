@@ -1,7 +1,7 @@
 #include <mcp_can.h>
 #include <mcp_can_dfs.h>
 #define maxAnglesServo 270
-// CAN-Library from Seeed-Studio
+// CAN-Library from Seeed-Studio (link below)
 //https://github.com/Seeed-Studio/CAN_BUS_Shield
 
 // CAN-BUS Shield, receive data with interrupt mode
