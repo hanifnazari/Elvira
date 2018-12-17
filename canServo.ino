@@ -1,6 +1,8 @@
 #include <mcp_can.h>
 #include <mcp_can_dfs.h>
 #define maxAnglesServo 270
+// CAN-Library from Seeed-Studio
+//https://github.com/Seeed-Studio/CAN_BUS_Shield
 
 // CAN-BUS Shield, receive data with interrupt mode
 // CAN-bus and servomotor PD-regulator code
