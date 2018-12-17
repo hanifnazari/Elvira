@@ -5,7 +5,7 @@
 //https://github.com/Seeed-Studio/CAN_BUS_Shield
 
 // CAN-BUS Shield, receive data with interrupt mode
-// CAN-bus and servomotor PD-regulator code
+// CAN-bus and servomotor, PD-regulator
 // Author: Hanif Nazari & Tobias Hansson, 2018-12-01
 
 #include <SPI.h>
