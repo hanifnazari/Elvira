@@ -1,6 +1,14 @@
 # Elvira
 
-<p>Elvira is a project at Halmstad University by 3 engineering students.
+<p>Elvira is a project at Halmstad University.
+  
+Project contributors
+
+Hanif Nazari - software
+
+Tobias Hansson - software
+
+Marko Stozinic - hardware
   
 The task was to setup a system to wirelessly control servo engines on a robot.
 The solution is a rasberry pi running a webserver through witch the user gives input.
