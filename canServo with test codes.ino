@@ -18,14 +18,13 @@ const int SPI_CS_PIN = 9;
 MCP_CAN CAN(SPI_CS_PIN);                                    // Set CS pin
 
 // TEST VARS
-/*
 int testflag = 0;
 int samplesLen = 100; //???
 int samplesPerSec = 10; //???
 int samples[100];
 int testIndex = 0;
 float testDeltaT = 0;
-*/
+
 // TEST VARS END
 
 unsigned char flagRecv = 0;
@@ -107,7 +106,7 @@ void loop()  {
           case 0:    // update target
             target = (int)buf[1];
             // if testing 
-           // testflag = 1;
+           testflag = 1;
             // 
             break;
           case 1:    //send back angle
@@ -170,7 +169,7 @@ void loop()  {
     digitalWrite(6, LOW);
     analogWrite(5, reg);
   }
-/*
+
   if(testflag){
     testDeltaT += deltaT;
     while (testDeltaT > 0.1 && testIndex < samplesLen){
@@ -182,7 +181,6 @@ void loop()  {
       testflag = 0;
     }
   }
-  */
 
 }
 
