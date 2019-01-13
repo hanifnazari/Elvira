@@ -1,4 +1,13 @@
 # Elvira
+
+<p>Elvira is a project at Halmstad University by 3 engineering students.
+  
+The task was to setup a system to wirelessly control servo engines on a robot.
+The solution is a rasberry pi running a webserver through witch the user gives input.
+The pi distributes instructions to the servo control units with a CAN bus setup.
+</p>
+<br>
+
 <p>Author: Hanif Nazari</p>
 <p>Arduino ServoMotor:</p>
 <br>
