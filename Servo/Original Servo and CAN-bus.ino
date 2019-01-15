@@ -120,8 +120,8 @@ void loop()  {
 if(target!=0){
   e = target - val;
   reg = p*e + (e - oldE)/deltaT/1000;
-  if(reg > 70){ reg = 70;}
-  else if(reg < -70){ reg = -70;}
+  if(reg > tak){ reg = tak;}
+  else if(reg < -tak){ reg = -tak;}
   oldE = e;
 
   if (reg > 0 ) {
