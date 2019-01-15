@@ -24,6 +24,7 @@ int target = 0; //
 int val = 0; // current value
 int e = 0; // error = target(desired value) - val(acutal Value)
 int oldE = 0;
+int tak = 0; 
 int p = 8;
 int reg = 0;// (p * e) + ((e - oldE) / (deltaT / 1000));
 long currentMillis;
@@ -85,34 +86,26 @@ void loop()  {
         switch (messageType) {
           case 0:    // update target
             target = (int)buf[1];
-            //testflag = 1;
             break;
           case 1:    //send back angle
             stmp[0] = Myid;
             stmp[1] = val;
             CAN.sendMsgBuf(0x00, 0, 2, stmp);
-            Serial.print(val, HEX);
             delay(100);   // send data per 100ms
             break;
           case 2:     //set upper Limit
             if (upperLim <= 255) {
               upperLim = (int)buf[1];
-              Serial.print("upperLim");
-              Serial.println(upperLim);
             }
             break;
           case 3: // set lower limit
             if (lowerLim >= 10) {
               lowerLim = (int)buf[1];
-              Serial.print("lowerLim");
-              Serial.println(lowerLim);
             }
             break;
             
           case 4: // update p value
-          
-            p = (int)buf[1];
-            Serial.println(p);
+            tak = (int)buf[1];
             break;
         }  
 
