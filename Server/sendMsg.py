@@ -54,4 +54,6 @@ if sys.argv[1].isdigit() and int(sys.argv[1]) >= 0 and int(sys.argv[1]) <= 99 an
 				print("sent: " + sys.argv[i] + " to id " + id)
 			retval = p.wait()
 		if int(sys.argv[i]) < 0 or int(sys.argv[i]) > 255:
-			print("error: out of bounds")
+			print("Error: out of bounds")
+else 
+	print("Error: invalid message type")
