@@ -6,8 +6,7 @@ p = subprocess.Popen(s, shell=True, stdout=subprocess.PIPE, stderr=subprocess.ST
 res = p.stdout.readlines()
 if res:
 	print "Error:"
-	print res
-	for line in p.stdout.readlines():
+	for line in res:
 		print line
 else:
 	print "System intitiated"

@@ -45,7 +45,13 @@ if sys.argv[1].isdigit() and int(sys.argv[1]) >= 0 and int(sys.argv[1]) <= 99 an
 			s = 'cansend can0 '+id+'#'+type+msg
 	
 			p = subprocess.Popen(s, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-			for line in p.stdout.readlines():
-				print line,
+			res = p.stdout.readlines()
+			if res:
+				print "Error:"
+				for line in res:
+					print line
+			else:
+				print("sent: " + sys.argv[i] + " to id " + id)
 			retval = p.wait()
-			print("sent: " + sys.argv[i] + " to id " + id)
+		if int(sys.argv[i]) < 0 or int(sys.argv[i]) > 255:
+			print("error: out of bounds")
